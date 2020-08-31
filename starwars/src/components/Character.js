@@ -49,8 +49,8 @@ const StyledDiv = styled.div`
 
 const StyledImg = styled.img`
     :hover {
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
     }
 `;
 
