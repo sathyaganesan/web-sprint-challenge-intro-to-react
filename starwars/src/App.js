@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-import Character from './components/Character';
+import Character from './components/Character.js';
+import { Card, CardTitle } from 'reactstrap';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -31,16 +32,27 @@ const [ricky, setRicky] = useState ([]);
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <Card>
       {ricky.map((item) => {
-        return (<Character 
+        return (
+        <Character 
           key = {item.id}
           name = {item.name}
-          src = {item.image}
-          speices = {item.species}
+          species = {item.species}
           gender = {item.gender}
           status = {item.status}
-        />);
+          created = {item.created}
+          // type = {item.type}
+          actorDetails = {item.url}
+          characterImage = {item.image}
+        />
+
+        // <CharacterLink
+        //  />
+        
+        );
       })} 
+      </Card>
     </div>
   );
 }
