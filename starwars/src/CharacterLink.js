@@ -1,9 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledA = styled.a`
+    text-decoration: none;
+    color: indianred;
+`;
 
     const CharacterLink = (props) => {
         return(
             <div>
-                <p><a href = {props.url}></a></p>
+                <p><StyledA href = {props.actorDetails} target='_blank'>Character Details</StyledA></p>
             </div> 
         );  
     };

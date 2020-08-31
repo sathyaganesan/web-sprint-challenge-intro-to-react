@@ -3,7 +3,7 @@ import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import styled from 'styled-components';
 
 const StyledBtn = styled.button`
-    width: 150px;
+    width: 160px;
     height: 50px;
     border-radius: 10px;
     border: none;
@@ -12,10 +12,14 @@ const StyledBtn = styled.button`
     color: red;
 `;
 
+
 const ButtonCompo = (props) => {
-    return (
+    function fwdTo() {
+        alert('Hello!121' );
+      }
+        return (
         <div>
-            <StyledBtn onClick= {props.actorDetails} target='_blank'>{props.name}</StyledBtn>
+            <StyledBtn onClick = {fwdTo}>{props.name}</StyledBtn>
         </div>
     );
 };
